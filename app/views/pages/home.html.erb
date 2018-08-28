@@ -6,15 +6,16 @@
   </div>
 </div>
 
+<%#= simple_form_for [@hostel, @booking] do |f| %>
+ <%#= f.input :date, input_html: { id: 'datepicker' }  %>
+<%#= javascript_pack_tag 'datepicker' %>
+
 
 <div class="homebuttons">
-
- <div class="hostelbook">
- <%= link_to "Find a Hostel", hostels_path, class: "btn btn-book" %> <br>
- </div>
- <%= link_to "Find a Service", services_path, class: "btn btn-service" %>
-
-
+  <div class="hostelbook">
+    <%= link_to "Find a Hostel", hostels_path, class: "btn btn-book" %> <br>
+  </div>
+  <%= link_to "Find a Service", services_path, class: "btn btn-service" %>
 </div>
 
 
