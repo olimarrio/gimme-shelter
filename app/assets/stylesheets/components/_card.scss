@@ -6,6 +6,19 @@
   color: white;
   position: relative;
 }
+
+
+.hostel-card h2{
+  height: 100px;
+  width: 150px;
+  font-size:15px;
+}
+
+.slick-current .hostel-card {
+  height: 200px;
+  width: 100%;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
@@ -45,7 +58,5 @@
   opacity: 0.1;
 }
 
-.hostel-card h2{
-font-size:15px;
-}
+
 
