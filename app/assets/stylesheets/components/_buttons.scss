@@ -1,0 +1,35 @@
+.btn-book {
+  color: $white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  background: $red;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+}
+.btn-book:hover {
+  opacity: 1;
+  background: #A41124;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
+
+
+
+.btn-service {
+  color: $white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  background: $blue;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+}
+.btn-service:hover {
+  opacity: 1;
+  background: #57A0B5;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
