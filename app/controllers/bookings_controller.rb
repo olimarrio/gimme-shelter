@@ -8,10 +8,9 @@ class BookingsController < ApplicationController
   def show
   end
 
-  def new
-    @booking = Booking.find(params[:user_id])
-    @booking = Booking.new
-  end
+  # def new
+  #   @booking = Booking.new
+  # end
 
   def edit
   end
@@ -22,10 +21,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @booking = Booking.find(params[:user_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+    @hostel = Hostel.find(params[:hostel_id])
+    @booking.user = current_user
+    @booking.hostel = @hostel
     if @booking.save
       redirect_to booking_path(@booking), notice: "Thanks for booking"
     else
