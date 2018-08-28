@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-    resources :users
+    resources :users, except: [:index]
     resources :bookings
     resources :hostels, only: [:index, :show]
     resources :services, only: [:index, :show]
