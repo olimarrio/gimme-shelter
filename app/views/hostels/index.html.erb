@@ -8,13 +8,14 @@
             <h2 class="card-name"> <%= hostel.name %></h2>
             <h3 class="card-address"> <%= hostel.address %> </h>
           </div>
-          <p class="price">£<%= hostel.price %></p>
+          <p class="price"><%= humanized_money_with_symbol(hostel.price)  %></p>
           <div class="btn-index">
             <%= link_to "Choose Hostel", hostel_path(hostel), class: "btn btn-book" %>
           </div>
          </div>
       <% end %>
     </div>
+
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 class Hostel < ApplicationRecord
+  monetize :price_cents
   has_many :users, through: :bookings
   has_many :bookings
   validates :name, presence: true
