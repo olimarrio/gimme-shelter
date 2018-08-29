@@ -1,5 +1,5 @@
-import flatpickr from "flatpickr"
+// import flatpickr from "flatpickr"
 
-const datepicker = document.getElementById('datepicker')
+// const datepicker = document.getElementById('datepicker')
 
-flatpickr(datepicker, {})
+// flatpickr(datepicker, {})
