@@ -9,7 +9,9 @@
             <h3 class="card-address"> <%= hostel.address %> </h>
           </div>
           <p class="price">£<%= hostel.price %></p>
-          <%= link_to "Choose Hostel", hostel_path(hostel), class: "btn btn-book btn-hostel" %>
+          <div class="btn-index">
+            <%= link_to "Choose Hostel", hostel_path(hostel), class: "btn btn-book" %>
+          </div>
          </div>
       <% end %>
     </div>
@@ -17,6 +19,7 @@
 </div>
 
 <%= javascript_pack_tag "carousel" %>
+
 
 
 
