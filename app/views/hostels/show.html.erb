@@ -1,6 +1,17 @@
 <h1> This is the hostel show page </h1>
 
-<%= link_to "Book Now!", new_booking_path(@booking), class: "btn btn-book" %>
+<!--  link_to "Book Now!", new_hostel_booking_path(@hostel), class: "btn btn-book" -->
+
+
+
+<%= form_tag hostel_bookings_path(@hostel) do %>
+  <%= hidden_field_tag 'hostel_id', @hostel.id %>
+  <%= submit_tag 'Book Now', class: 'btn btn-book' %>
+<% end %>
+
+
+
+
 
 <!-- <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">
        Book Now

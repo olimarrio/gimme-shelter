@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   def show
     @user = current_user
@@ -8,8 +8,6 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
-
-
 
   def update
     @user = User.find(current_user.id)
@@ -25,6 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.required(:user).permit(:fist_name, :last_name)
   end
-end
-
 end
