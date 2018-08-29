@@ -6,11 +6,12 @@ class BookingsController < ApplicationController
   end
 
   def show
+     @booking = current_user.bookings.where(state: 'paid').find(params[:id])
   end
 
-  # def new
-  #   @booking = Booking.new
-  # end
+  def new
+    @booking = Booking.new
+  end
 
   def edit
   end
@@ -21,15 +22,20 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @hostel = Hostel.find(params[:hostel_id])
-    @booking.user = current_user
-    @booking.hostel = @hostel
-    if @booking.save
-      redirect_to booking_path(@booking), notice: "Thanks for booking"
-    else
-      render :new
-    end
+    hostel = Hostel.find(params[:hostel_id].to_i)
+    booking = Booking.new(hostel_sku: hostel.sku, amount: hostel.price, state: 'pending', user: current_user)
+    booking.hostel = hostel
+    booking.save
+    redirect_to new_hostel_booking_payment_path(hostel, booking)
+    # @booking = Booking.new(booking_params)
+    # @hostel = Hostel.find(params[:hostel_id])
+    # @booking.user = current_user
+    # @booking.hostel = @hostel
+    # if @booking.save
+    #   redirect_to booking_path(@booking), notice: "Thanks for booking"
+    # else
+    #   render :new
+    # end
   end
 
   def destroy
