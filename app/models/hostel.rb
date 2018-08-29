@@ -5,4 +5,12 @@ class Hostel < ApplicationRecord
   validates :address, presence: true
   validates :description, presence: true
   validates :price, presence: true
+
+  include PgSearch
+  pg_search_scope :search_address,
+    against: [ :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end
