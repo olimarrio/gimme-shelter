@@ -7,8 +7,8 @@
           <div class="card hostel-card" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path hostel.photo %>);">
             <h2> <%= hostel.name %></h2>
             <h2> <%= hostel.address %> </h2>
-            <p>£<%= hostel.price %></p>
           </div>
+          <p class="price">£<%= hostel.price %></p>
           <%= link_to "Choose Hostel", hostel_path(hostel), class: "btn btn-book btn-hostel" %>
          </div>
       <% end %>
@@ -17,4 +17,6 @@
 </div>
 
 <%= javascript_pack_tag "carousel" %>
+
+
 
