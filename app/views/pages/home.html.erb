@@ -9,13 +9,24 @@
 <%#= simple_form_for [@hostel, @booking] do |f| %>
  <%#= f.input :date, input_html: { id: 'datepicker' }  %>
 <%#= javascript_pack_tag 'datepicker' %>
+<div class="wrapper">
+  <div class="search">
+   <%= form_tag hostels_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control input-curve",
+            placeholder:  "     Location"%>
+            <i class="fas fa-location-arrow"></i>
 
-
-<div class="homebuttons">
-  <div class="hostelbook">
-    <%= link_to "Find a Hostel", hostels_path, class: "btn btn-book" %> <br>
   </div>
-  <%= link_to "Find a Service", services_path, class: "btn btn-service" %>
+  <div class="homebuttons">
+    <div class="hostelbook">
+      <input type="submit" value="Find a Hostel"  class= "btn btn-book">
+      <%#= link_to "Find a Hostel", hostels_path, class: "btn btn-book" %> <br>
+    </div>
+    <% end %>
+    <%= link_to "Find a Service", services_path, class: "btn btn-service" %>
+  </div>
 </div>
 
 

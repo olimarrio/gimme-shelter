@@ -1,9 +1,36 @@
 // Specific CSS for your home-page
-.homebuttons{
-  text-align: center;
-  padding:30px;
-}
-
 .hostelbook{
 padding-bottom: 20px;
+}
+
+
+.homebuttons{
+  text-align: center;
+
+
+}
+
+
+.search{
+  width:200px;
+  position:relative;
+
+
+  margin:20px auto;
+
+ i {
+  position:absolute;
+  top:10px;
+  left:12px;
+ }
+}
+
+
+.wrapper{
+   margin:20px auto;
+}
+
+.input-curve{
+  border-radius: 50px;
+  padding-left:35px;
 }
