@@ -16,7 +16,12 @@
   font-family: 'Quicksand';
 }
 
-
+.btn-hostel {
+  margin-top: 5px;
+  margin-left: 60px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
 
 .btn-service {
   color: $white;
@@ -52,4 +57,8 @@
   text-decoration: none;
   color: $white;
   font-family: 'Quicksand';
+}
+
+.btn-login {
+  width: 100px;
 }

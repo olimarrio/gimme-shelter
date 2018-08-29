@@ -18,8 +18,15 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search'
 
+gem 'nokogiri'
+gem 'watir'
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'webdrivers'
+gem  'chromedriver-helper'
+
 group :development do
-  gem 'web-console', '>= 3.3.0'
+gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
