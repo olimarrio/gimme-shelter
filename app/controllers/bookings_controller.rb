@@ -9,9 +9,12 @@ class BookingsController < ApplicationController
      @booking = current_user.bookings.where(state: 'paid').find(params[:id])
   end
 
+
   def new
     @booking = Booking.new
   end
+
+
 
   def edit
   end

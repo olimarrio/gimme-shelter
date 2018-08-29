@@ -3,27 +3,56 @@
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: $white;
   position: relative;
+  border-radius: 10px;
+  margin-top: 10px;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+
+
+.hostel-card h2 {
+  height: 15px;
+  width: 150px;
+  font-size:15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.card-category {
+
+.hostel-card h3 {
+  height: 15px;
+  width: 150px;
+  font-size:15px;
+}
+
+.price {
+  font-size: 25px;
+  color: $blue;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+
+.slick-current .hostel-card {
+  height: 200px;
+  width: 100%;
+}
+
+
+.card-name {
   position: absolute;
   top: 10px;
   left: 10px;
   font-size: 15px;
   text-transform: uppercase;
 }
-.card-description {
+
+.card-address {
   position: absolute;
   bottom: 10px;
   left: 10px;
+
   }
 
 .card-description p {
@@ -45,7 +74,5 @@
   opacity: 0.1;
 }
 
-.hostel-card h2{
-font-size:15px;
-}
+
 
