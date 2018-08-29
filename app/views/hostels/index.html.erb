@@ -4,7 +4,7 @@
       <%@hostels.each do |hostel|%>
         <div class="col-xs-12">
         <!-- insert <div class="card"> -->
-          <div class="card hostel-card" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path hostel.photo %>);">
+          <div class="card hostel-card" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= hostel.photo %>);">
             <h2> <%= hostel.name %></h2>
             <h2> <%= hostel.address %> </h2>
             <p>£<%= hostel.price %></p>
