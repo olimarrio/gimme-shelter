@@ -9,8 +9,6 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-
-
   def update
     @user = User.find(current_user.id)
     if @user.update(user_params)
@@ -25,6 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.required(:user).permit(:fist_name, :last_name)
   end
-end
-
 end
