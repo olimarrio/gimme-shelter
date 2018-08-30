@@ -1,6 +1,6 @@
 .thanks{
   background-color: $blue;
-  height:140px;
+  height:170px;
   position:top;
   border-bottom: 2px solid $red;
 
@@ -12,25 +12,29 @@
     padding-top: 40px;
     font-weight: lighter;
   }
+  p{
+    border-top: 30px;
+  }
 }
 
 
 .lovehouse{
-  width:50px;
+  width:80px;
   // border: solid;
   border-radius: 50%;
   border: 2px solid $red;
   background:$blue;
   // margin-top:-28px;
   // margin-left:138px;
-  margin:-26px auto 8px auto;
+  margin:-40px auto 8px auto;
   display:block;
 
 }
 
 .bookingdetails{
-text-align:center;
-padding-top:20px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 24px;
 }
 
 
@@ -40,22 +44,26 @@ ul{
 }
 .random{
   color: $red;
+  margin-top: 20px;
+  margin-bottom: -5px;
 }
 
 
 .text{
   text-align:center;
-  padding-top:0px;
+  padding-top: 30px;
   .phone{
     border-radius:50px;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
 
 .line{
   text-align:center;
-  margin-bottom: 0px;
-  // margin-top:0px;
+  margin-bottom: 8px;
+  margin-top: -15px;
 }
 
 // .text-submit{
@@ -66,7 +74,8 @@ ul{
  display:block;
  margin:0 auto;
  width:35%;
- margin-top: 15px;
+ margin-top: 30px;
+
 }
 
 
