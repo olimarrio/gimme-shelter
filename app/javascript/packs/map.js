@@ -13,7 +13,8 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   } else {
     map.fitLatLngBounds(markers);
   }
-      const styles = [     {
+      const styles = [
+    {
         "featureType": "administrative",
         "elementType": "labels.text.fill",
         "stylers": [
@@ -78,7 +79,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
                 "visibility": "simplified"
             },
             {
-                "color": "#c8142b"
+                "color": "#7c9299"
             }
         ]
     },
