@@ -39,14 +39,9 @@ ActiveRecord::Schema.define(version: 2018_08_29_153600) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.integer "price_cents", default: 0, null: false
-
-
     t.float "latitude"
     t.float "longitude"
-
     t.string "sku"
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "services", force: :cascade do |t|
