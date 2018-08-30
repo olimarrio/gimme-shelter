@@ -6,15 +6,16 @@
 
 <!-- <img class="lovehouse" src="../../../images/noun_love.png"> -->
 
-<%= image_tag  "noun_love.png", class: "lovehouse" %>
+<%= image_tag "noun_love.png", class: "lovehouse" %>
 
 
 
 
 <div class="bookingdetails">
 
- Your booking number is <br>
- <strong class="random"><%= rand(100..500) %></strong>
+  Your booking number is <br>
+  <strong class="random"><%= rand(100..500) %></strong>
+  <p class="line">--------------</p>
 <!-- <ul> -->
   <!-- <li>Status: <%= @booking.state %></li> -->
   <!-- <li>Item: <%= @booking.hostel_sku %></li> -->
@@ -22,11 +23,9 @@
 <!-- </ul> -->
 </div>
 
-<p class="line">--------------</p>
 <div class="text">
-<p>Send them a text with the details of this booking</p>
-<input class="phone" placeholder="555-0123">
-
+  <p>Send them a text with the details of this booking</p>
+  <input class="phone" placeholder="07••• ••• •••">
 </div>
 
 <h3 class="btn btn-book btn-center text-center">Submit</h3>
