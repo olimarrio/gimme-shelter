@@ -15,10 +15,9 @@
 }
 .banner p {
   font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
-  margin-bottom: 30px;
+  color: $white;
+  // opacity: 0.9;
+  margin-top: 205px;
 }
 
 @media only screen and (max-width: 600px) {
