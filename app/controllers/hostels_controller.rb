@@ -29,5 +29,6 @@ class HostelsController < ApplicationController
   def show
     # @booking = Booking.create(user_id: current_user)
     @hostel = Hostel.find(params[:id])
+    @booking = Booking.create(hostel_sku: @hostel.sku, amount: @hostel.price, state: 'pending', user: current_user, hostel: @hostel)
   end
 end
