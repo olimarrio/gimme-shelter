@@ -1,63 +1,102 @@
-// .btn-filter {
-//   color: $white;
-//   padding: 5px 10px;
-//   border-radius: 20px;
-//   background: $blue;
-//   transition: background 0.3s ease;
-//   font-family: 'Quicksand';
-//   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
-//   margin: 5px;
-// }
+.btn-filter {
+  color: $white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: $blue;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+  font-weight: lighter;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  margin: 5px;
+  font-size: 12px;
+  width: 85px;
+  text-align: center;
+}
 
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: space-evenly;
+}
 
-/*the container must be positioned relative:*/
-.custom-select {
+.dropdown {
+  display: inline-block;
   position: relative;
-  font-family: Arial;
 }
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
+
+.dd-button {
+  display: inline-block;
+  border: 1px $blue;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
 }
-.select-selected {
-  background-color: $blue;
-}
-/*style the arrow inside the select element:*/
-.select-selected:after {
+
+.dd-button:after {
+  content: '';
   position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
   width: 0;
   height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
 }
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+
+.dd-button:hover {
+  background-color: #eeeeee;
 }
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: $blue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-/*hide the items when the select box is closed:*/
-.select-hide {
+
+
+.dd-input {
   display: none;
 }
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid $blue;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: $white;
+  list-style-type: none;
+  color: $blue;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+}
+
+.dd-input:checked + .dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
 }

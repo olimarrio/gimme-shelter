@@ -11,8 +11,13 @@
 <%#= simple_form_for [@hostel, @booking] do |f| %>
  <%#= f.input :date, input_html: { id: 'datepicker' }  %>
 <%#= javascript_pack_tag 'datepicker' %>
+<div class= homepage-description>
+  <p>Welcome to Gimme Shelter. We provide a quick and effective way to book a hostel bed for those most in need.</p>
+</div>
+
 <div class="wrapper">
   <div class="search">
+
    <%= form_tag hostels_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
