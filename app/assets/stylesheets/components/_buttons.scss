@@ -35,16 +35,7 @@
   font-family: 'Quicksand';
 }
 
-.btn-filter {
-  color: $white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  background: $blue;
-  transition: background 0.3s ease;
-  font-family: 'Quicksand';
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
-  margin: 5px;
-}
+
 
 .btn-filter:hover {
   opacity: 1;
