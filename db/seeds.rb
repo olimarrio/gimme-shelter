@@ -1,6 +1,7 @@
   Hostel.destroy_all
+  Service.destroy_all
 
-  puts "creating hostels"
+  puts "creating hostels and services"
 
 Hostel.create!({:name=>"Generator Hostel London", :photo=>"//a.hwstatic.com/propertyimages/5/510/371_30.jpg", :address=>"Compton Place, Off 37 Tavistock Place, WC1"})
  Hostel.create!({:name=>"Wombats City Hostel London", :photo=>"//a.hwstatic.com/propertyimages/8/88047/40_30.jpg", :address=>"7 Dock Street"})
@@ -137,4 +138,13 @@ Hostel.create!({:name=>"Generator Hostel London", :photo=>"//a.hwstatic.com/prop
  Hostel.create!({:name=>"Access Maida Vale", :photo=>"//a.hwstatic.com/propertyimages/2/274827/4_30.jpg", :address=>"31 Clifton Gardens, Maida Vale"})
 
 
-  puts "Created #{Hostel.count}) hostels"
+ Service.create!(title: "London Food Bank", address: "14 Liverpool Street", category: "Food Bank")
+ Service.create!(title: "London Clothes", address: "14 Liverpool Street", category: "Clothes")
+ Service.create!(title: "London Housing", address: "14 Liverpool Street", category: "Housing")
+ Service.create!(title: "London Day Centre", address: "14 Liverpool Street", category: "Day Centre")
+ Service.create!(title: "London Health", address: "14 Liverpool Street", category: "Health Service")
+ Service.create!(title: "London Job Centre", address: "14 Liverpool Street", category: "Job Centre")
+
+
+
+  puts "Created #{Hostel.count}) hostels and #{Service.count} services"
