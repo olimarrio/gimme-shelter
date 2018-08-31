@@ -1,13 +1,19 @@
 
 <div class="hostel-show">
-  picture of hostel
+  <%= image_tag "hostel.jpg", class: "hostel-img" %>
   <h2><%= @booking.hostel_sku %> <%= @hostel.name %></h2>
   <%= form_tag hostel_booking_payments_path(@hostel, @booking) do %>
   <p class="address"><%= @hostel.address %></p>
   <div class="containter-icons">
-    <%= image_tag "nodog.png", class: "img-icon" %>
+    <div class="no-dog">
+      <%= image_tag "no.png", class: "no-icon" %>
+      <%= image_tag "dog.png", class: "img-icon" %>
+    </div>
     <%= image_tag "mixedroom.png", class: "img-icon" %>
-    <%= image_tag "nobeer.png", class: "img-icon" %>
+    <div class="no-dog">
+    <%= image_tag "no.png", class: "no-icon" %>
+    <%= image_tag "beer.png", class: "img-icon" %>
+    </div>
   </div>
 <!--   <p>phone number</p> -->
     <article>
