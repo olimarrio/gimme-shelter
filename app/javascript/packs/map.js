@@ -1,19 +1,40 @@
 import GMaps from 'gmaps/gmaps.js';
+import slick from 'slick-carousel'
+
 
 const mapElement = document.getElementById('map');
+
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
   map.addMarkers(markers);
+
+  // define initial zoom
   if (markers.length === 0) {
     map.setZoom(2);
-  } else if (markers.length === 1) {
+  } else {
     map.setCenter(markers[0].lat, markers[0].lng);
     map.setZoom(14);
-  } else {
-    map.fitLatLngBounds(markers);
   }
-      const styles = [
+
+  const changeMapZoom = (map, currentSlide) => {
+    map.setCenter(markers[currentSlide].lat, markers[currentSlide].lng)
+    map.setZoom(14)
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    $('.carousel').slick({
+      centerMode: true,
+      centerPadding: '35px',
+      arrows: false,
+      mobileFirst: true
+    })
+  })
+
+  $('.carousel').on('afterChange', (event, slick, currentSlide) => {
+    changeMapZoom(map, currentSlide)
+  })
+
+  const styles = [
     {
         "featureType": "administrative",
         "elementType": "labels.text.fill",
@@ -148,8 +169,14 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       map.setStyle('map_style');
 }
 
+
 import { autocomplete } from '../components/autocomplete';
 
-
 autocomplete();
+
+
+
+
+
+
 

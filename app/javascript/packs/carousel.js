@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     centerMode: true,
     centerPadding: '35px',
     arrows: false,
-    mobileFirst: true,
+    mobileFirst: true
   })
+})
+
+$('.carousel').on('afterChange', (event, slick, currentSlide) => {
+  console.log(currentSlide)
+  changeMapZoom(currentSlide)
 })
