@@ -1,6 +1,6 @@
 
 <div class="hostel-show">
-  <%= image_tag "hostel.jpg", class: "hostel-img" %>
+  <%= image_tag @hostel.photo, class: "hostel-img" %>
   <h2><%= @booking.hostel_sku %> <%= @hostel.name %></h2>
   <%= form_tag hostel_booking_payments_path(@hostel, @booking) do %>
   <p class="address"><%= @hostel.address %></p>
