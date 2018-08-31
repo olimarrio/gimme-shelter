@@ -5,3 +5,23 @@ border-bottom: solid;
 border-color: $red;
 margin-top: 4px;
 }
+
+
+.services-card{
+  background-color: transparent;
+  border: solid;
+  border-color: $red;
+  border-width: 5px;
+  margin: 2px;
+  padding: 9px;
+
+
+}
+
+.card-category{
+  font-size: 18px;
+  text-align:center;
+  color:$blue;
+
+
+}
