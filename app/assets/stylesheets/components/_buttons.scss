@@ -53,3 +53,17 @@
   text-align: center;
   padding: 5px 20px 10px 20px;
 }
+
+.stripe-button-el span {
+  color: $white !important;
+  border-radius: 5px !important;
+  font-weight: bold;
+  background: $red !important;
+  border: none !important;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand' !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+
+}
