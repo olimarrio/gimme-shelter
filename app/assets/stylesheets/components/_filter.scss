@@ -12,6 +12,13 @@
   width: 85px;
   text-align: center;
 }
+.btn-filter:hover {
+  opacity: 1;
+  background: #57A0B5;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
 
 .filter-container {
   display: flex;
@@ -24,6 +31,7 @@
 .dropdown {
   display: inline-block;
   position: relative;
+  z-index: 4;
 }
 
 .dd-button {
