@@ -1,7 +1,9 @@
 <div class="containter-profile">
   <h3>Profile page</h3>
-  <%= image_tag "profile_picture.jpg", height: 100, class: "img-profile" %>
-  <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-  <p><%= @user.email %></p>
-  <p>edit password <%#= link_to edit_user_password_path(current_user) %></p>
+  <%= image_tag "profile_picture.jpg", height: 100, class: "image-cropper img-profile" %>
+  <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+  <p>E-mail: <%= @user.email %></p>
+  <p><%#= link_to "Edit password", edit_user_password_path %></p>
+  <%= link_to "Edit your profile", edit_user_registration_path, class: "profile-edit" %>
 </div>
+
