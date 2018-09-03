@@ -133,8 +133,10 @@
 
 .dd-menu label {
   cursor: pointer;
+  font-size: 11px;
+  text-align: center;
 }
 
 .selected {
-  background-color: red;
+  background-color: $red;
 }
