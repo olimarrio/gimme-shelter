@@ -1,36 +1,59 @@
 <div class="filter-container">
-  <label class="dropdown">
-    <div class="btn-filter">
-      Room type
-    </div>
-    <input type="checkbox" class="dd-input" id="test">
-    <ul class="dd-menu">
-      <li>Mixed Room</li>
-      <li>Female Only</li>
-    </ul>
-  </label>
-  <label class="dropdown">
-    <div class="btn-filter">
-      Pets
-    </div>
-    <input type="checkbox" class="dd-input" id="test">
-    <ul class="dd-menu">
-      <li>No pets</li>
-      <li>Pets allowed</li>
-    </ul>
-  </label>
-  <label class="dropdown">
-    <div class="btn-filter">
-      Alcohol
-    </div>
-    <input type="checkbox" class="dd-input" id="test">
-    <ul class="dd-menu">
-      <li>No alcohol</li>
-      <li>Alcohol allowed</li>
-    </ul>
-  </label>
-</div>
+  <form action="/hostels" method="get">
+    <label class="dropdown">
+      <div class="btn-filter">
+        Room type
+      </div>
+      <input type="checkbox" class="dd-input" id="test">
+      <div class="dd-menu">
+        <label for="female-only-false">
+          <input type="checkbox" class="hidden" value="false" id="female-only-false" name="female_only">
+          Mixed Room
+        </label>
+        <label for="female-only-true">
+          <input type="checkbox" class="hidden" value="true" id="female-only-true" name="female_only">
+          Female Only
+        </label>
+      </div>
+    </label>
 
+    <label class="dropdown">
+      <div class="btn-filter">
+        Pets
+      </div>
+      <input type="checkbox" class="dd-input" id="test">
+      <div class="dd-menu">
+        <label for="pets-false">
+          <input type="checkbox" class="hidden" value="false" id="pets-false" name="pets">
+          No Pets
+        </label>
+        <label for="pets-true">
+          <input type="checkbox" class="hidden" value="true" id="pets-true" name="pets">
+          Pets Allowed
+        </label>
+      </div>
+    </label>
+
+    <label class="dropdown">
+      <div class="btn-filter">
+        Alcohol
+      </div>
+      <input type="checkbox" class="dd-input" id="test">
+      <div class="dd-menu">
+        <label for="alcohol-false">
+          <input type="checkbox" class="hidden" value="false" id="alcohol-false" name="alcohol">
+          No Alcohol
+        </label>
+        <label for="alcohol-true">
+          <input type="checkbox" class="hidden" value="true" id="alcohol-true" name="alcohol">
+          Alcohol Allowed
+        </label>
+      </div>
+    </label>
+    </label>
+    <input type="submit" value="Update">
+  </form>
+</div>
 
 <div
   id="map"
@@ -61,7 +84,4 @@
 </div>
 
 <%# javascript_pack_tag "carousel" %>
-
-
-
-
+<%= javascript_pack_tag 'filters' %>
