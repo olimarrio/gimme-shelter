@@ -15,12 +15,12 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "profile_picture.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "profile_picture.jpg", class: "avatar dropdown-toggle image-cropper", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
+              <%= link_to user_path(current_user) do %>
+                  <i class="far fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <% end %>
             </li>
             </li>
                 <li><a href="#"><i class="fas fa-home"></i> My bookings</a></li>
@@ -49,11 +49,11 @@
     <% if user_signed_in? %>
       <div class="navbar-wagon-item ">
         <div class="dropdown">
-          <%= image_tag "profile_picture.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "profile_picture.jpg", class: "avatar dropdown-toggle image-cropper", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-                <%= link_to "#" do %>
-              <i class="far fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <%= link_to user_path(current_user) do %>
+                  <i class="far fa-user"></i> <%= t(".profile", default: "Profile") %>
                 <% end %>
             </li>
             <li>
