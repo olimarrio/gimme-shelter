@@ -56,7 +56,10 @@
               <i class="far fa-user"></i> <%= t(".profile", default: "Profile") %>
                 <% end %>
             </li>
-            <li><a href="#"><i class="fas fa-home"></i> My bookings</a></li>
+            <li>
+              <%= link_to hostel_bookings_path(current_user) do  %>
+               <i class="fas fa-home"></i> My bookings
+               <% end %>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
                <i class="fas fa-sign-out-alt"></i>  <%= t(".sign_out", default: "Log out") %>
@@ -65,7 +68,6 @@
           </ul>
         </div>
       </div>
-
     <% else %>
         <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
