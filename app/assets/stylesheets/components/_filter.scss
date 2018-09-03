@@ -1,6 +1,6 @@
 .btn-filter {
   color: $white;
-  padding: 5px 10px;
+  padding: 5px 8px;
   border-radius: 20px;
   background: $blue;
   transition: background 0.3s ease;
@@ -9,7 +9,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
   margin: 5px;
   font-size: 12px;
-  width: 85px;
+  width: 75px;
   text-align: center;
 }
 .btn-filter:hover {
@@ -20,12 +20,34 @@
   font-family: 'Quicksand';
 }
 
+.btn-apply {
+  color: $white;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: $red;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+  font-weight: lighter;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  margin: 5px;
+  font-size: 12px;
+  width: 75px;
+  text-align: center;
+}
+.btn-apply:hover {
+  opacity: 1;
+  background: #A41124;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
+
 .filter-container {
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
-  margin-right: 10px;
-  justify-content: space-evenly;
+  margin-left: 8px;
+  margin-right: 8px;
+  justify-content: space-between;
 }
 
 .dropdown {
