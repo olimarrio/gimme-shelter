@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: [:show, :edit, :destroy]
 
   def index
+    # @hostels = Hostel.all
     @bookings = Booking.where(user: current_user)
   end
 

@@ -1,0 +1,19 @@
+<h1 class="booking-header"> My Bookings</h1>
+
+
+
+<div class="container">
+  <div class="row">
+    <% @bookings.each do |booking| %>
+    <div class="col-xs-12">
+      <div class="card hostel-card" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path booking.hostel.photo %>);">
+      <h2 class="card-name"><%= booking.hostel.name %></h2>
+      <h3 class="card-address"> <%= booking.hostel.address %> </h3>
+       <p class=" price-location"><%= humanized_money_with_symbol(booking.hostel.price)  %></p>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
