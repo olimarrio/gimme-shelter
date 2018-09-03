@@ -1,4 +1,5 @@
-if (document.querySelector('.flyout')) {
+function navbar() {
+  if (document.querySelector('.flyout')) {
   var flyout = document.querySelector('.flyout');
 
   document.addEventListener('click', function(e) {
@@ -8,4 +9,7 @@ if (document.querySelector('.flyout')) {
       flyout.classList.remove('active');
     }
   });
+  }
 }
+
+export { navbar };
