@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   def index
-    @services = Service.filter(params.slice(:starts_with))
+    @services = Service.all
   end
 
   def show
