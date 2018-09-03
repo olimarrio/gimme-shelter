@@ -38,7 +38,9 @@
     <%= favicon_link_tag 'favicon.png' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless params[:controller] == 'services' %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <div class="<%= params[:controller] == 'pages' ? 'home-min-content-height' : 'min-content-height' %>">
       <%= yield %>
