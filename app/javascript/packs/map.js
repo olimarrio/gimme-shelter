@@ -7,8 +7,18 @@ const mapElement = document.getElementById('map');
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
   const markers = JSON.parse(mapElement.dataset.markers);
+  console.log(markers[0])
   map.addMarkers(markers);
 
+  let pos;
+  navigator.geolocation.getCurrentPosition(function(position) {
+    pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    }
+    map.addMarkers([{lat: pos.lat, lng: pos.lng, icon: {url: "/assets/user-icon-bac625d2a3caeec08050c98b6c2bb1435ed5b269e9ce8010fa28b5989ac12dac.png"}}])
+
+  })
   // define initial zoom
   if (markers.length === 0) {
     map.setZoom(2);
