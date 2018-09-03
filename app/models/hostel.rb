@@ -17,4 +17,23 @@ class Hostel < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+   pg_search_scope :search_room_type,
+    against: [ :female ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
+  pg_search_scope :search_pets,
+    against: [ :pets ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
+   pg_search_scope :search_alcohol,
+    against: [ :alcohol],
+    using: {
+      tsearch: { prefix: true }
+    }
+
+
 end

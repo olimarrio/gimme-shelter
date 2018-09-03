@@ -87,24 +87,32 @@
   display: block;
 }
 
-.dd-menu li {
+.dd-menu input {
   padding: 5px;
   cursor: pointer;
   white-space: nowrap;
   font-size: 12px;
 }
 
-.dd-menu li:hover {
+.dd-menu input:hover {
   background-color: #f6f6f6;
 }
 
-.dd-menu li a {
+.dd-menu input a {
   display: block;
   margin: -10px -20px;
   padding: 10px 20px;
 }
 
-.dd-menu li.divider{
+.dd-menu input.divider{
   padding: 0;
   border-bottom: 1px solid #cccccc;
+}
+
+.dd-menu label {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: red;
 }

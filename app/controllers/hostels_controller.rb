@@ -1,20 +1,35 @@
 class HostelsController < ApplicationController
 
   def index
-    # @hostels = Hostel.all
+    # location
     if params[:query].present?
       @hostels = Hostel.search_address(params[:query]).where.not(latitude: nil, longitude: nil)
     else
       @hostels = Hostel.where.not(latitude: nil, longitude: nil)
     end
 
-    #  if params[:query].present?
-    #   @hostels = Hostel.search_address(params[:query])
+    # female_only
+    if params[:female_only].present?
+      @hostels = @hostels.where(female_only: params[:female_only])
+    end
+
+    # pets
+    if params[:pets].present?
+      @hostels = @hostels.where(pets: params[:pets])
+    end
+
+    # alcohol
+    if params[:alcohol].present?
+      @hostels = @hostels.where(alcohol: params[:alcohol])
+    end
+
+    # if params[:query].present?
+    #    @hostels = Hostel.search_room_type(params[:query]).where.not(female: false)
     # else
-    #   @hostels = Hostel.all
+    #   @hostels = Hostel.where.not(female: false)
+
     # end
 
-    # @hostels = Hostel.where.not(latitude: nil, longitude: nil)
 
      @markers = @hostels.map do |hostel|
       {
@@ -23,6 +38,15 @@ class HostelsController < ApplicationController
         icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
 
        }
+    end
+
+    if headers['Content-Type'] == 'application/javascript'
+      render partial: 'hostels/index'
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
