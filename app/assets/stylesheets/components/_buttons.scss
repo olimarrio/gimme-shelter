@@ -35,6 +35,45 @@
   font-family: 'Quicksand';
 }
 
+.btn-confirm {
+  color: $white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: $red;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 180px;
+  margin: 15px 0px 15px 0px;
+}
+.btn-confirm:hover {
+  opacity: 1;
+  background: #A41124;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
+
+.btn-svc {
+  color: $white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: $blue;
+  transition: background 0.3s ease;
+  font-family: 'Quicksand';
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 180px;
+}
+.btn-svc:hover {
+  opacity: 1;
+  background: #57A0B5;
+  text-decoration: none;
+  color: $white;
+  font-family: 'Quicksand';
+}
+
 
 
 

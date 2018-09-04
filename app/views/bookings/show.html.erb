@@ -3,24 +3,15 @@
   <h2>Thank you. You're giving someone shelter tonight!</h2>
 </div>
 
-
-<!-- <img class="lovehouse" src="../../../images/noun_love.png"> -->
-
 <%= image_tag "noun_love.png", class: "lovehouse" %>
 
 
 
 
 <div class="bookingdetails">
-
   Your booking number is <br>
   <strong class="random"><%= rand(100..500) %></strong>
   <p class="line">--------------</p>
-<!-- <ul> -->
-  <!-- <li>Status: <%= @booking.state %></li> -->
-  <!-- <li>Item: <%= @booking.hostel_sku %></li> -->
-  <!-- <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li> -->
-<!-- </ul> -->
 </div>
 
 <div class="text">
@@ -29,14 +20,13 @@
 </div>
 
 <div class="homebuttons">
-    <div class="hostelbook">
-<div>
-  <%= link_to "Submit", root_path, class: "btn btn-book btn-center text-center"%>
-</div>
-
-<div>
-  <%= link_to "More services", services_path, class: "btn btn-service btn-home" %>
-</div>
-</div>
+  <div class="hostelbook">
+    <div>
+      <%= link_to "Submit", root_path, class: "btn btn-book btn-confirm"%>
+    </div>
+    <div>
+      <%= link_to "More services", services_path, class: "btn btn-book btn-svc"%>
+    </div>
+  </div>
 </div>
 
