@@ -40,13 +40,13 @@
   color: $white;
   padding: 10px 15px;
   border-radius: 25px;
-  font-weight: bold;
   background: $red;
   transition: background 0.3s ease;
   font-family: 'Quicksand';
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  width: 180px;
+  width: 150px;
   margin: 15px 0px 15px 0px;
+  // font-weight: lighter;
 }
 .btn-confirm:hover {
   opacity: 1;
@@ -60,12 +60,12 @@
   color: $white;
   padding: 10px 15px;
   border-radius: 25px;
-  font-weight: bold;
   background: $blue;
   transition: background 0.3s ease;
   font-family: 'Quicksand';
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  width: 180px;
+  width: 150px;
+  font-weight: lighter;
 }
 .btn-svc:hover {
   opacity: 1;
