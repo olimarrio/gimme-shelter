@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     centerPadding: '35px',
     arrows: false,
     mobileFirst: true,
-    swipe: 10
+    swipeAngle: false
   })
 })
 
