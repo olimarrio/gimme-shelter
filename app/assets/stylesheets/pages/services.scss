@@ -17,7 +17,7 @@
   i{
     font-size:50px;
 
-    // text-align:center;
+    text-align:center;
   }
 }
 
@@ -52,7 +52,7 @@
 
 .s-icons{
   color: $blue;
-  font-size:15px;
+  font-size:13px;
   // text-align:center;
   margin-top:10px;
 }
@@ -60,6 +60,22 @@
 
 
 
+.fa-briefcase-medical:before {
+    content: "\f469";
+    padding-left: 22px;
+}
+
+
+.fa-briefcase:before {
+    content: "\f0b1";
+    padding: 11px;
+}
+
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    padding: 10px;
+}
 
 
 
