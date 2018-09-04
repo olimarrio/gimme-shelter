@@ -140,11 +140,21 @@
 
 
  Service.create!(title: "London Food Bank", address: "14 Liverpool Street", category: "Food Bank")
- Service.create!(title: "London Clothes", address: "14 Liverpool Street", category: "Clothes")
- Service.create!(title: "London Housing", address: "14 Liverpool Street", category: "Housing")
- Service.create!(title: "London Day Centre", address: "14 Liverpool Street", category: "Day Centre")
- Service.create!(title: "London Health", address: "14 Liverpool Street", category: "Health Service")
- Service.create!(title: "London Job Centre", address: "14 Liverpool Street", category: "Job Centre")
+ Service.create!(title: "London Food Bank", address: "83 Upper St, London, N1 0NU", category: "Food Bank")
+ Service.create!(title: "London Clothes", address: "54 Islington Park St, London, N1 1PX", category: "Clothes")
+ Service.create!(title: "London Clothes", address: "60 Cross Street, London, N1 2BA", category: "Clothes")
+ Service.create!(title: "London Housing", address: "Westgate House, 2a, Prebend St, London, N1 8PT", category: "Housing")
+ Service.create!(title: "London Housing", address: "98b St. Paul St, London, N1 7DF", category: "Housing")
+ Service.create!(title: "London Day Centre", address: "14 Dagmar Passage, London, N1 2DN ", category: "Day Centre")
+ Service.create!(title: "London Day Centre", address: "shoreditch", category: "Day Centre")
+ Service.create!(title: "London Health", address: "100 Upper St, London, N1 0NP", category: "Health Service")
+ Service.create!(title: "London Health", address: "St. Marys Church, Upper St, London, N1 2TX", category: "Health Service")
+ Service.create!(title: "London Job Centre", address: "7 Upper St, London, N1 0PQ", category: "Job Centre")
+ Service.create!(title: "London Job Centre", address: "207 Upper St, London, N1 1RL", category: "Job Centre")
+ Service.create!(title: "London Job Centre", address: "4 Compton Avenue, London, N1 2XD", category: "Vet Services")
+ Service.create!(title: "London Job Centre", address: "Camden Passage, 33, Islington Green, London, N1 8DU", category: "Vet Services")
+ Service.create!(title: "London Job Centre", address: "The Shopping Centre, 21, Parkfield St, London, N1 0PS", category: "Outreach")
+ Service.create!(title: "London Job Centre", address: "61 Richmond Avenue, London, N1 0LX", category: "Outreach")
 
 
 

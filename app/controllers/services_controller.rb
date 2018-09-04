@@ -1,6 +1,25 @@
 class ServicesController < ApplicationController
   def index
-    @services = Service.all
+    @services = Service.all.where.not(latitude: nil, longitude: nil)
+    if params[:category].present?
+      @markers = @services.where(category: params[:category]).map do |service|
+        {
+          lat: service.latitude,
+          lng: service.longitude,
+          icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
+          # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        }
+      end
+    else
+      @markers = @services.map do |service|
+        {
+          lat: service.latitude,
+          lng: service.longitude,
+          icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
+          # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        }
+      end
+    end
   end
 
   def show

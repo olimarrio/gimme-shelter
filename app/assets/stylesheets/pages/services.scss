@@ -12,11 +12,13 @@
 
 .services-card{
   background-color: transparent;
-  border: solid;
-  border-color: $red;
-  border-width: 5px;
   margin: 2px;
-  padding: 9px;
+  padding-bottom: 20px;
+  i{
+    font-size:50px;
+
+    // text-align:center;
+  }
 }
 
 .card-category{
@@ -34,4 +36,31 @@
 .service-container {
   justify-content: space-between;
   text-align: left;
+
 }
+
+
+
+.s-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top:25px;
+  padding-left:10px;
+}
+
+.s-icons{
+  color: $blue;
+  font-size:15px;
+  // text-align:center;
+  margin-top:10px;
+}
+
+
+
+
+
+
+
+
