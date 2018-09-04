@@ -5,15 +5,37 @@
   <%= form_tag hostel_booking_payments_path(@hostel, @booking) do %>
   <p class="address"><%= @hostel.address %></p>
   <div class="containter-icons">
-    <div class="no-dog">
-      <%= image_tag "no.png", class: "no-icon" %>
-      <%= image_tag "dog.png", class: "img-icon" %>
-    </div>
-    <%= image_tag "mixedroom.png", class: "img-icon" %>
-    <div class="no-dog">
-    <%= image_tag "no.png", class: "no-icon" %>
-    <%= image_tag "beer.png", class: "img-icon" %>
-    </div>
+    <% if @hostel.pets == false %>
+      <% display %>
+      <div class="no-dog">
+        <%= image_tag "no.png", class: "no-icon" %>
+        <%= image_tag "dog.png", class: "img-icon" %>
+      </div>
+    <% else %>
+      <% display %>
+      <div class="dog">
+        <%= image_tag "dog.png", class: "img-icon" %>
+      </div>
+    <% end %>
+
+    <% if @hostel.female_only == true %>
+      <% display %>
+        <%= image_tag "female.png", class: "img-icon" %>
+    <% else %>
+      <% display %>
+        <%= image_tag "mixedroom.png", class: "img-icon" %>
+    <% end %>
+
+    <% if @hostel.alcohol == false %>
+      <% display %>
+        <div class="no-beer">
+          <%= image_tag "no.png", class: "no-icon" %>
+          <%= image_tag "beer.png", class: "img-icon" %>
+        </div>
+    <% else %>
+      <% display %>
+        <%= image_tag "beer.png", class: "img-icon" %>
+    <% end %>
   </div>
 <!--   <p>phone number</p> -->
     <article>
@@ -34,5 +56,31 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--     <div class="no-dog"> -->
+      <%#= image_tag "no.png", class: "no-icon" %>
+      <%#= image_tag "dog.png", class: "img-icon" %>
+<!--     </div> -->
+    <%#= image_tag "mixedroom.png", class: "img-icon" %>
+<!--     <div class="no-beer"> -->
+    <%#= image_tag "no.png", class: "no-icon" %>
+    <%#= image_tag "beer.png", class: "img-icon" %>
+<!--     </div> -->
+
+
 
 
