@@ -148,4 +148,4 @@
 
 
 
-  puts "Created #{Hostel.count}) hostels and #{Service.count} services"
+  puts "Created #{Hostel.count} hostels and #{Service.count} services"
