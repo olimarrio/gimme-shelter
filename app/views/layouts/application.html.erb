@@ -43,7 +43,7 @@
     <% end %>
     <%= render 'shared/flashes' %>
 
-    <div class="<%= params[:controller] == 'pages' ? 'home-min-content-height' : 'min-content-height' %>">
+    <div class="<%= params[:controller] == 'pages' || params[:controller] == 'services' ? 'home-min-content-height' : 'min-content-height' %>">
       <%= yield %>
     </div>
     <%= render 'shared/footer' %>
