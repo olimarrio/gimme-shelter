@@ -48,12 +48,14 @@
   margin-left: 8px;
   margin-right: 8px;
   justify-content: space-between;
+  z-index: 1 !important;
 }
 
-.dropdown {
+.dropdown-filter {
   display: inline-block;
   position: relative;
-  z-index: 4;
+  z-index: 10 !important;
+
 }
 
 .dd-button {
@@ -99,6 +101,7 @@
   background-color: $white;
   list-style-type: none;
   color: $blue;
+  text-align: center;
 }
 
 .dd-input + .dd-menu {
@@ -135,8 +138,12 @@
   cursor: pointer;
   font-size: 11px;
   text-align: center;
+
 }
 
 .selected {
-  background-color: $red;
+  color: $red
+
+
+
 }
