@@ -26,6 +26,7 @@
   transition: background 0.3s ease;
   font-family: 'Quicksand';
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  text-align: center;
 }
 .btn-service:hover {
   opacity: 1;
@@ -75,9 +76,6 @@
 }
 
 
-
-
-
 .btn-login {
   width: 100px;
 }
@@ -99,4 +97,9 @@
   box-shadow: none !important;
   text-shadow: none !important;
 
+}
+
+.btn-home {
+  width: 200px;
+  height: auto;
 }
