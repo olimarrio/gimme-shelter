@@ -14,7 +14,8 @@ class Hostel < ApplicationRecord
   pg_search_scope :search_address,
     against: [ :address ],
     using: {
-      tsearch: { prefix: true }
+      tsearch: {any_word: true}
+      # tsearch: {prefix: true}
     }
 
    pg_search_scope :search_room_type,
