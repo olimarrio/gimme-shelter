@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
     strings: ["Welcome to Gimme Shelter", "Book a bed for someone in need today."],
-    typeSpeed: 40,
+    typeSpeed: 60,
     loop: false
   });
 }
