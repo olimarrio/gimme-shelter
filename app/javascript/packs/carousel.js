@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     centerMode: true,
     centerPadding: '35px',
     arrows: false,
-    mobileFirst: true
+    mobileFirst: true,
+    swipe: 10
   })
 })
 
