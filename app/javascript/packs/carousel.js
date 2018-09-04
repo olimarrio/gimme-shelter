@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 $('.carousel').on('afterChange', (event, slick, currentSlide) => {
-  console.log(currentSlide)
-  changeMapZoom(currentSlide)
+  setTimeout(
+    changeMapZoom(currentSlide),
+    1000
+  )
 })
