@@ -46,9 +46,9 @@
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
       data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-      data-name="Hostel"
+      data-name="Your booking for..."
       data-email="<%= current_user.email %>"
-      data-description="Hostel <%= @booking.hostel_sku %>"
+      data-description="<%= @hostel.name %>"
       data-amount="<%= @booking.amount_cents %>"
       data-currency="<%= @booking.amount.currency %>"></script>
 
