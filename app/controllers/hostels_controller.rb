@@ -31,6 +31,7 @@ class HostelsController < ApplicationController
     # end
 
     @icon_url = ActionController::Base.helpers.image_url('orangepin.png')
+    @icon_svc = ActionController::Base.helpers.image_url('bluemarker.png')
     @user_icon = ActionController::Base.helpers.image_url('user-icon.png')
 
      @markers = @hostels.map do |hostel|

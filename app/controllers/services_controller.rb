@@ -7,7 +7,7 @@ class ServicesController < ApplicationController
           lat: service.latitude,
           lng: service.longitude,
           infoWindow:  {content: render_to_string(partial: "services/map_box", locals: { service: service })},
-          icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
+          icon: { url: ActionController::Base.helpers.image_url('bluemarker.png')}
           # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
         }
       end
@@ -17,7 +17,7 @@ class ServicesController < ApplicationController
           lat: service.latitude,
           lng: service.longitude,
           infoWindow:  {content: render_to_string(partial: "services/map_box", locals: { service: service })},
-          icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
+          icon: { url: ActionController::Base.helpers.image_url('bluemarker.png')}
         }
       end
     end
