@@ -16,7 +16,6 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       lng: position.coords.longitude
     }
     map.addMarkers([{lat: pos.lat, lng: pos.lng, icon: {url: "/assets/user-icon-bac625d2a3caeec08050c98b6c2bb1435ed5b269e9ce8010fa28b5989ac12dac.png"}}])
-
   })
     console.log(pos)
   // define initial zoom
@@ -25,12 +24,32 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   } else {
     map.setCenter(markers[0].lat, markers[0].lng);
     map.setZoom(14);
+
   }
 
-  const changeMapZoom = (map, currentSlide) => {
+  const toggleBounce = (marker, index) => {
+    map.removeMarkers()
+    const markers = JSON.parse(mapElement.dataset.markers).slice(index, 0)
+    map.addMarkers(markers)
+    map.addMarkers([
+      {
+        animation: google.maps.Animation.BOUNCE,
+        lat: marker.lat,
+        lng: marker.lng,
+        icon: { url: "/assets/orangepin.png" }
+      }
+    ])
+
+  }
+
+    const changeMapZoom = (map, currentSlide) => {
     map.setCenter(markers[currentSlide].lat, markers[currentSlide].lng)
     map.setZoom(14)
+    toggleBounce(markers[currentSlide])
   }
+
+
+
   document.addEventListener('DOMContentLoaded', () => {
     $('.carousel').slick({
       centerMode: true,
@@ -43,6 +62,9 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   $('.carousel').on('afterChange', (event, slick, currentSlide) => {
     changeMapZoom(map, currentSlide)
   })
+
+
+
 
   const styles = [
     {
