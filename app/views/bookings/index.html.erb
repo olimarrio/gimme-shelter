@@ -10,6 +10,7 @@
       <h2 class="card-name"><%= booking.hostel.name %></h2>
       <h3 class="card-address"> <%= booking.hostel.address %> </h3>
        <p class=" price-location"><%= humanized_money_with_symbol(booking.hostel.price)  %></p>
+       <p class="date-location"><%= Date.today %></p>
     </div>
     </div>
     <% end %>

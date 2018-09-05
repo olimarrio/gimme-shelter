@@ -13,3 +13,13 @@
   color: $blue;
   text-align: center;
 }
+
+
+.date-location{
+  color: $blue;
+  position:absolute;
+    left:240px;
+  top:10px;
+  font-family: $headers-font;
+  font-weight:bold;
+}
