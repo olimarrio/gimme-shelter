@@ -1,11 +1,13 @@
 import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
-  new Typed('#banner-typed-text', {
-    strings: ["Welcome to Gimme Shelter", "Book a bed for someone in need today."],
-    typeSpeed: 60,
-    loop: false
-  });
+  if (document.getElementById('banner-typed-text')) {
+    new Typed('#banner-typed-text', {
+      strings: ["Welcome to Gimme Shelter", "Book a bed for someone in need today."],
+      typeSpeed: 60,
+      loop: false
+    });
+  }
 }
 
 export { loadDynamicBannerText };
