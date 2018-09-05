@@ -12,42 +12,40 @@
 
 .services-card{
   background-color: transparent;
-  margin: 2px;
-  padding-bottom: 20px;
+  margin: 10px;
+  // padding-bottom: 20px;
+  padding: 0px 0px 20px 0px;
+  width: 100px;
+  height: auto;
   i{
     font-size:50px;
-
     text-align:center;
   }
 }
 
-.card-category{
-  font-size: 18px;
-  text-align:center;
-  color: $blue;
-}
 
 .img-arrow {
  width: auto;
  height: 50px;
- margin-right: 80px;
+ // margin-right: 80px;
 }
 
 .service-container {
   justify-content: space-between;
-  text-align: left;
-
+  text-align: center;
 }
 
 
 
 .s-container{
   width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top:25px;
-  padding-left:10px;
+  // padding-left:10px;
+  margin: 0 15px;
 }
 
 .s-icons{
@@ -55,14 +53,27 @@
   font-size:13px;
   // text-align:center;
   margin-top:10px;
+  margin-right: 0px;
 }
 
+.svc-dcp {
+  width: 80px;
+  margin: 20;
+  border: 0px;
+}
 
-
-
+.fix-txt{
+  padding:0 5px;
+}
+.clothes-txt {
+  padding: 0px 10px 0px 10px;
+}
+.fix-hlt {
+  padding: 0 10px;
+}
 .fa-briefcase-medical:before {
     content: "\f469";
-    padding-left: 22px;
+    padding: 5px;
 }
 
 
@@ -77,6 +88,27 @@
     padding: 10px;
 }
 
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+    padding: 8px;
+}
 
+.fa-sun:before {
+    content: "\f185";
+    padding: 10px;
+}
 
+.fa-utensils:before {
+    content: "\f2e7";
+    padding: 10px;
+}
 
+.fa-paw:before {
+    content: "\f1b0";
+    padding: 16px;
+}
+
+.fa-hand-paper:before {
+    content: "\f256";
+    padding: 5px;
+}
