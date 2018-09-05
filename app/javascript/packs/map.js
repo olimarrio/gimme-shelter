@@ -22,7 +22,7 @@ const mapElement = document.getElementById('map');
   // });
 // }
 
-
+if (mapElement) {
 const markerIconUrl = document.getElementById('map-urls').dataset.markerIconUrl;
 const userIconUrl = document.getElementById('map-urls').dataset.userIconUrl;
 
@@ -223,7 +223,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       });
       map.setStyle('map_style');
 }
-
+}
 
 import { autocomplete } from '../components/autocomplete';
 
