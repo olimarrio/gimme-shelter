@@ -50,8 +50,9 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
   const toggleBounce = (marker, index) => {
     map.removeMarkers()
-    const markers = JSON.parse(mapElement.dataset.markers).slice(index, 0)
-    map.addMarkers(markers)
+    let allMarkers = JSON.parse(mapElement.dataset.markers)
+    let bounceMarker = allMarkers.splice(index, 1)[0]
+    map.addMarkers(allMarkers)
     map.addMarkers([
       {
         animation: google.maps.Animation.BOUNCE,
@@ -66,7 +67,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     const changeMapZoom = (map, currentSlide) => {
     map.setCenter(markers[currentSlide].lat, markers[currentSlide].lng)
     map.setZoom(14)
-    toggleBounce(markers[currentSlide])
+    toggleBounce(markers[currentSlide], (currentSlide))
   }
 
 
@@ -81,6 +82,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   })
 
   $('.carousel').on('afterChange', (event, slick, currentSlide) => {
+    console.log(currentSlide)
     changeMapZoom(map, currentSlide)
   })
 
