@@ -23,7 +23,7 @@ const mapElement = document.getElementById('map');
 // }
 
 
-const markerIconUrl = document.getElementById('map-urls').dataset.markerUrl;
+const markerIconUrl = document.getElementById('map-urls').dataset.markerIconUrl;
 const userIconUrl = document.getElementById('map-urls').dataset.userIconUrl;
 
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
@@ -39,7 +39,6 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     }
     map.addMarkers([{lat: pos.lat, lng: pos.lng, icon: {url: userIconUrl }}])
   })
-    console.log(pos)
   // define initial zoom
   if (markers.length === 0) {
     map.setZoom(2);
