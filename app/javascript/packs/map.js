@@ -23,10 +23,11 @@ const mapElement = document.getElementById('map');
 // }
 
 
-
+const markerIconUrl = document.getElementById('map-urls').dataset.markerUrl;
+const userIconUrl = document.getElementById('map-urls').dataset.userIconUrl;
 
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
-  const map = new GMaps({ el: '#map', lat: 0, lng: 0 });
+  const map = new GMaps({ el: '#map', lat: 0, lng: 0, disableDefaultUI: true });
   const markers = JSON.parse(mapElement.dataset.markers);
   map.addMarkers(markers);
 
@@ -36,7 +37,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
       lat: position.coords.latitude,
       lng: position.coords.longitude
     }
-    map.addMarkers([{lat: pos.lat, lng: pos.lng, icon: {url: "/assets/user-icon-bac625d2a3caeec08050c98b6c2bb1435ed5b269e9ce8010fa28b5989ac12dac.png"}}])
+    map.addMarkers([{lat: pos.lat, lng: pos.lng, icon: {url: userIconUrl }}])
   })
     console.log(pos)
   // define initial zoom
@@ -57,7 +58,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
         animation: google.maps.Animation.BOUNCE,
         lat: marker.lat,
         lng: marker.lng,
-        icon: { url: "/assets/orangepin.png" }
+        icon: { url: markerIconUrl }
       }
     ])
 
