@@ -30,12 +30,14 @@ class HostelsController < ApplicationController
 
     # end
 
+    @icon_url = ActionController::Base.helpers.image_url('orangepin.png')
+    @user_icon = ActionController::Base.helpers.image_url('user-icon.png')
 
      @markers = @hostels.map do |hostel|
       {
         lat: hostel.latitude,
         lng: hostel.longitude,
-        icon: { url: ActionController::Base.helpers.image_url('orangepin.png')}
+        icon: { url: @icon_url}
 
        }
     end

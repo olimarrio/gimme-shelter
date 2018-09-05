@@ -139,7 +139,7 @@
  # Hostel.create!({:name=>"Access Maida Vale", :photo=>"//a.hwstatic.com/propertyimages/2/274827/4_30.jpg", :address=>"31 Clifton Gardens, Maida Vale", :price_cents=> (900..2400).to_a.sample})
 
 
- Service.create!(title: "London Food Bank", address: "14 Liverpool Street", category: "Food Bank")
+ Service.create!(title: "London Food Bank", address: "14 Liverpool Street, London", category: "Food Bank")
  Service.create!(title: "London Food Bank", address: "83 Upper St, London, N1 0NU", category: "Food Bank")
  Service.create!(title: "London Clothes", address: "54 Islington Park St, London, N1 1PX", category: "Clothes")
  Service.create!(title: "London Clothes", address: "60 Cross Street, London, N1 2BA", category: "Clothes")
