@@ -21,8 +21,8 @@ const mapElement = document.getElementById('map');
   //   disableDefaultUI: true
   // });
 // }
-
 if (mapElement) {
+
 const markerIconUrl = document.getElementById('map-urls').dataset.markerIconUrl;
 const userIconUrl = document.getElementById('map-urls').dataset.userIconUrl;
 
