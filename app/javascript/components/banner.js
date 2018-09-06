@@ -6,6 +6,7 @@ function loadDynamicBannerText() {
       strings: ["Welcome to Gimme Shelter", "Book a bed for someone in need today."],
       typeSpeed: 60,
       loop: false
+
     });
   }
 }
