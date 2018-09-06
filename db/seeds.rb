@@ -169,7 +169,7 @@
  Service.create!(title: "Street Vet", address: "138 Kennington Park Rd, Kennington, London SE11 4JD", category: "Vet Services" , description: "Meals and shelter for homeless people and their pets")
  Service.create!(title: "St Mungo's", address: "6 Bramber Road, London", category: "Outreach" , description: "Advice and referrals to treatment for substance misuse.")
  Service.create!(title: "London Street Angels", address: "2 Charterhouse Street, London", category: "Outreach" , description: "Street outreach team supporting people sleeping rough.")
- Service.create!(title: "Street Team", address: "36 Ironmonger Lane, London", category: "Outreach" , description: "Support, food and clothing.")
+ Service.create!(title: "Street Team", address: "36 Ironmonger Lane, London", category: "Food Bank" , description: "Support, food and clothing.")
 
 
 
