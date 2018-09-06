@@ -144,7 +144,7 @@
 
 
  Service.create!(title: "The Trussell Trust", address: "14 Liverpool Street, London", category: "Food Bank"  , description:"Provides hot food/drinks" )
- Service.create!(title: "Whitechapel Mission", address: "83 Upper St, London, N1 0NU", category: "Food Bank" , description: " Free meals with tea, coffee or soft drink.")
+ Service.create!(title: "Whitechapel Mission", address: "83 Bury Court, London", category: "Food Bank" , description: " Free meals with tea, coffee or soft drink.")
  Service.create!(title: "Helping Hand", address: "3 South Pl, London EC2M 2AF", category: "Food Bank"  , description:"Provides filling warm meal and shelter")
  Service.create!(title: "Hope", address: "54 Islington Park St, London, N1 1PX", category: "Clothes" , description: "Laundry, clothing and general goods store")
  Service.create!(title: "Clothes for good", address: "50 Great Dover St, London SE1 4YG", category: "Clothes" , description: "Donated clean clothes.")
@@ -154,8 +154,8 @@
  Service.create!(title: "Roof", address: "813 Wandsworth Rd, London SW8 3JH", category: "Housing" , description:"Support and advice on housing options" )
  Service.create!(title: "St Martin's Day Centre", address: "14 Dagmar Passage, London, N1 2DN ", category: "Day Centre" , description: "Day centre and support services for single homeless people.")
  Service.create!(title: "The Passage Day Centre", address: "1 Redchurch Street, London, E2 7DJ ", category: "Day Centre" , description:"Drop-in day centre for people aged 16+ needing support." )
- Service.create!(title: "Rest Here", address: "237 Record St, London SE15 1TL ", category: "Day Centre" , description:"Day Centre for homeless people in London suffering with sunbstance abuse." )
- Service.create!(title: "Break Street", address: "81 Chatsworth Rd, London E5 0LH", category: "Day Centre" , description:"Drop-in day centre for people aged 16+ needing support" )
+ Service.create!(title: "Rest Here", address: "237 Record St, London SE15 1TL ", category: "Day Centre" , description:"For homeless people in London suffering with sunbstance abuse. Call 020 7227 1673 for outreach." )
+ Service.create!(title: "Break Street", address: "81 Chatsworth Rd, London E5 0LH", category: "Day Centre" , description:"For people aged 16+ needing support. Phone 02079257895 for street outreach." )
  Service.create!(title: "St Austel Health", address: "100 Upper St, London, N1 0NP", category: "Health Service" , description:"Emergency appointments for homeless people." )
  Service.create!(title: "North Medical", address: "St. Marys Church, Upper St, London, N1 2TX", category: "Health Service" , description:"General health checks and advice" )
  Service.create!(title: "Southbank Drop-in", address: "74 Westow St, London SE19 3AF", category: "Health Service" , description:"Drop-in appointments 24hr" )
